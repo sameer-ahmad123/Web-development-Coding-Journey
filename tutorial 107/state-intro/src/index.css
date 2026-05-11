@@ -1,0 +1,37 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(60, 60, 90);
+ 
+}
+.btns{
+  margin-top: 100px;
+    display:  flex ;
+    height: 100px;
+    width: 200px;
+    gap: 10px;
+
+}
+button{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    height: 22px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(209, 209, 224);
+}
