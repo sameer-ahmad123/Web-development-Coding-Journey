@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from 'react';
-
-const Workout = () => {
-  const [pushups, setPushups] = useState(0);
-  const [pullups, setPullups] = useState(0);
-
+import React, { useState , useEffect} from 'react';
+const SavingsTracker = () => {
+const [pound, setpound] = useState(0)
 useEffect(() => {
-  if(pullups > 0){
-alert("Stay Hard !!!")
-  }
-}, [pullups])
-
-
+if(pound >= 2000){
+  alert("You can book the flight now")
+}
+}, [pound])
   return (
     <div>
-      <button onClick={() => setPushups(pushups + 1)}>Do Pushup</button>
-      <button onClick={() => setPullups(pullups + 1)}>Do Pullup</button>
-      <h1>The pushups are {pushups}</h1>
-      <h1>The pullups are {pullups}</h1>
+    <button onClick={()=>setpound(pound +100)}>Add 100 pound</button>
+    <h1>Your current savings are {pound}</h1>
+<h2></h2>
     </div>
   )
 }
-export default Workout
+export default SavingsTracker;
