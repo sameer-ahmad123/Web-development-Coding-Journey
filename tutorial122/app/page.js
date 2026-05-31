@@ -1,13 +1,15 @@
 
 import React from 'react'
-// import { useState, useEffect } from 'react'
-const page = () => {
-  // const [count, setcount] = useState(0)
-  console.log("Hey i am sameer")
+import BoostButtons from '@/component/BoostButtons'
+const page = async () => {
+const response =  await fetch('https://api.github.com/users/sigma-dev');
+  const data = await  response.json();
+
   return (
     <div>
-   {/* the current count is {count}
-  <button onClick={()=>{setcount(count+ 1)}}>Click me</button> */}
+      <h1>Github Followers: {data.followers}</h1>
+<BoostButtons/>
+
     </div>
   )
 }
