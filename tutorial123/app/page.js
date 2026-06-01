@@ -1,17 +1,15 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Image from 'next/image'
-const page = () => {
+const Page = () => {
+const [isDayMode, setisDayMode] = useState(true)
+
   return (
-  
-    <div className='size-80 bg-amber-700 relative'>
- 
-<Image fill = {true} src={"https://loremflickr.com/500/500/space"} alt="Space Mission Placeholder" className="mx-auto object-cover" ></Image>
+    <div className='h-screen w-screen p-10'>
+    {isDayMode  ? <div><Image width={600} height={400} src={"https://loremflickr.com/600/400/sun"}/></div> :<div><Image width={600} height={400} src={"https://loremflickr.com/600/400/moon"}/></div> }
+    <button onClick={()=>{setisDayMode(!isDayMode)}}>{isDayMode? "Move to Night" : "Move to Day"}</button>
     </div>
   )
 }
 
-export default page
-export const metadata = {
-  title: "Home Page | Data related to contact is present here",
-  description: "This is contact page of facebook",
-};
+export default Page
