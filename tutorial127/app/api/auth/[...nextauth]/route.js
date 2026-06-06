@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import Githubprovider from "next-auth/providers/github"
 import GoogleProvider from 'next-auth/providers/google'
-
+import SpotifyProvider from "next-auth/providers/spotify"
 const handler = NextAuth({
     providers : [
         Githubprovider({
@@ -11,6 +11,10 @@ const handler = NextAuth({
           GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET
+    }),
+          SpotifyProvider({
+      clientId: process.env.SPOTIFY_ID,
+      clientSecret: process.env.SPOTIFY_SECRET
     }),
     ]
 })

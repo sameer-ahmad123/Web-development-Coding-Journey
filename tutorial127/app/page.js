@@ -58,6 +58,13 @@ const Dashboard = () => {
       >
         Log in with Google
       </button>
+
+      <button 
+        className='bg-green-500  text-white p-3 w-64 rounded-xl font-bold transition-all hover:scale-105' 
+        onClick={() => signIn("spotify")}
+      >
+        Log in with Spotify
+      </button>
     </div>
   )
 }
